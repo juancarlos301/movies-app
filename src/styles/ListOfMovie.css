@@ -1,0 +1,33 @@
+.container-all{
+    overflow: hidden;
+    width: 100vw;
+}
+.container-grid{
+    overflow: visible;
+}
+
+.text {
+    margin-left: 60px;
+    font-size: 4rem;
+    color: white;
+    text-shadow: -2px 4px 8px #646060;
+    margin-bottom: 10px;
+
+}
+
+.container{
+display: flex;
+margin: 10px 0px 50px ;
+overflow-x: scroll;
+width: 100%;
+scroll-snap-type: x mandatory; 
+}
+
+.grid-con{
+    display: grid;
+    margin: 0 20px;
+    grid-template-columns: repeat(auto-fit, 170px);
+    gap: 30px 10px;
+    padding: 0;
+
+}

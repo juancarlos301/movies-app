@@ -1,0 +1,19 @@
+.con-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 16px;
+}
+.navbar{
+    grid-column: span 8;
+    
+}
+.con-text{
+    grid-column: span 8;
+}
+.con-text h1{
+    margin-left: 60px;
+    font-size: 4rem;
+    color: white;
+    text-shadow: -2px 4px 8px #646060;
+    margin-bottom: 10px;
+}

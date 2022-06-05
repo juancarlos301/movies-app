@@ -1,0 +1,33 @@
+.container_imag {
+   padding: 0 4px;
+}
+.container_imag button{
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.container_imag .imag{
+    max-width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.container_imag .imag:hover{
+    transform: scale(1.1);
+}
+
+.container_imag p{
+    color: white;
+    font-size: medium;
+}
+.button-fav{
+    font-size: .8rem;
+    color: white;
+    align-items: center;
+    display: flex;
+}
+
+.button-fav svg{ 
+    fill: aliceblue;
+}

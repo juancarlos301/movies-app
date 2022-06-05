@@ -1,0 +1,158 @@
+.navbar { 
+    padding-top: 10px;
+    animation: 2s navbar  ease-in-out;
+    z-index: 2;
+}
+@keyframes navbar {
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.navbar .navbar-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+}
+
+.navbar-content ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    width: 90%;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.navbar-content ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    transition: all ease-in-out 300ms;
+}
+.navbar-content ul li a:hover{
+    background-color: rgba(214, 200, 200, 0.658);
+    border-bottom: 0.3rem solid rgb(255, 255, 255);
+    transition: 0.3s ease-in;
+}
+.barras {
+display: none;
+position: relative;
+}
+
+.form-search{
+    margin-top: 10px;
+}
+
+.input-search{
+padding: 6px;
+border-radius: 4px;
+border: none;
+margin-right: 10px;
+font-size: large;
+}
+.button-search{
+padding: 4px;
+font-size: medium;
+border-radius: 4px;
+border: none;
+}
+.button-search:hover{
+background-color: black;
+color: #fff;
+}
+@media (max-width: 500px) {
+    .input-search{
+        margin-bottom: 10px;
+        font-size: small;
+        }
+}
+
+@media (max-width: 800px) {   
+    .navbar{
+        padding-top: 0;
+    }
+.navbar .navbar-content {
+    width: 70%;
+    height: 100vh;
+    padding: 0px;
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    transition: 0.5s all ease-in;
+}
+.navbar div svg{
+    width: 200px;
+}
+.navbar .navbar-content.close {
+    left: -400px;
+    top: 0;
+}
+.navbar .navbar-content.open {
+    background-color: black;
+    left: 0; font-weight: 600;
+    top: 0;
+}
+.navbar-content ul{
+    margin: 0;
+    display: block;
+    min-height: 90vh;
+    padding-top: 60px;
+    }
+    .navbar-content ul li{
+    width: 70%;
+    margin: 0px 30px 30px;
+}
+.navbar-content ul li a{
+color: white;
+padding: 5px;
+}
+.barras {
+    position: absolute;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid rgba(255, 255, 255, 0.308);
+    border-radius: 4px;
+    display: block;
+    top:0;
+    left: 5px;
+}
+.barras button{
+    background: none;
+    border: none;
+}
+.barras span{
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 5px 0px;
+    border-radius: 1px;
+    background-color: #fff;
+}
+}
+
+
+@media (min-width: 800px) {
+    .navbar .navbar-content {
+        padding: 0 0 0 80px;
+    }
+    .navbar-content ul li a{
+        font-size: x-large;
+    }
+}
+@media (min-width: 1316px) {
+.navbar-content ul li a{
+    font-size: xx-large;
+
+}
+.navbar-content img{
+    width: 80px;
+
+}
+}
