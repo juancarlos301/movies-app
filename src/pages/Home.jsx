@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import ListFavsMovies from "../components/ListOfFavsMovies";
 import ListOFPopularMovies from "../components/ListOFPopularMovies";
 import Welcome from "../components/welcome";
@@ -44,6 +44,31 @@ const Home = () => {
     const ChangeHandler = (e) => {
         setQuery(e.target.value)
     }
+    //observer
+
+    const LazyLoad = () => {
+        const [show, setShow] = useState(false)
+        const element = useRef()
+
+        useEffect(function () {
+            const onLoad = (entries, observer) => {
+                const el = entries[0]
+                if (el.isIntersecting) {
+                    setShow(true)
+                    setSearchPage(searchPage + 1)
+                    observer.disconnect()
+                }
+            }
+            const observer = new IntersectionObserver(onLoad, {
+                rootMargin: '200px'
+            })
+            observer.observe(element.current)
+
+        })
+        return <div ref={element}>
+            {!show && null}
+        </div>
+    }
     return (
         <div>
             <Welcome query={query} searchMovie={searchMovie} ChangeHandler={ChangeHandler} />
@@ -60,11 +85,7 @@ const Home = () => {
                 movies={movies}
                 loading={loading} />
 
-            <div className="div-button">
-                <button className="button-more"
-                    onClick={() => setSearchPage(searchPage + 1)}
-                >Get More</button>
-            </div>
+            <LazyLoad />
         </div>
 
     )

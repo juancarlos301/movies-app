@@ -27,7 +27,7 @@ const ListFavsMovies = (props) => {
     return (
         <div className={props.list ? "container-grid" : "container-all"}>
             <div className="con-text">
-                <h1 className="text">Favorites</h1>
+                <h1 className="text">{favorites.length === 0 ? "You don't have favorites :(" : "Favorites"}</h1>
             </div>
             <ul className={props.list ? "grid-con" : "container"}>
                 {favorites.map(movie =>
