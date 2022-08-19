@@ -1,20 +1,35 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import '../styles/Navbar.css'
 import Logo from "../assets/svg";
 import { Link } from "react-router-dom";
 const Navbar = (props) => {
 
     const [click, setClick] = useState(false)
-
+    const [inView, setInView] = useState(false)
     const handleClick = () => {
         setClick(!click)
     }
+
+    const mirar= () => {
+        if(window.screen.width> 1000){
+            setTimeout(()=>{
+                console.log(window.scrollY)
+                if(window.scrollY > 55){
+                    setInView(true)
+                } else {
+                    setInView(false)
+                }
+                mirar()
+            },1000)
+            }
+    }
+    mirar()
 
     const searchMovie = props.searchMovie
     const value = props.value
     const ChangeHandler = props.ChangeHandler
     return (
-        <nav className="navbar"
+        <nav className={inView ? "navbar-fix" : "navbar"}
         >
             <div
                 className={click ? "navbar-content open" : "navbar-content close"}

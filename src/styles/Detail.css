@@ -29,6 +29,7 @@ flex-wrap: wrap;
     border: none;
     padding: 7px;
     margin: 0 20px 0 0;
+    cursor: pointer;
 }
 .container-text .con-buttons{
     min-width: 500px;
@@ -38,7 +39,7 @@ flex-wrap: wrap;
 .container-text .con-buttons button:hover{
 background-color: rgb(196, 43, 43);
 }
-.container-text .con-buttons .btn-1:hover{
+.container-text .con-buttons .btn-2:hover{
     background-color: rgba(42, 187, 78, 0.651);
 
 }

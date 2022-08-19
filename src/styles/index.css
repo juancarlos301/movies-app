@@ -6,23 +6,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #080f28;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.div-button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
+.container-list{
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
 }
-.button-more{
-  padding: 4px;
-  background-color: white;
-  font-size: larger;
-  border-radius: 6px;
-  margin-bottom: 30px;
-  border: none;
+@media (min-width: 1000px) {
+.container-list{
+  padding: 0 7%;
+  width: 80%;
+  max-width: 80%;
+}
 }

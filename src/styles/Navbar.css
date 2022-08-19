@@ -1,7 +1,17 @@
 .navbar { 
-    padding-top: 10px;
     animation: 2s navbar  ease-in-out;
     z-index: 2;
+    background: linear-gradient(black, rgba(0, 0, 0, 0.062));
+    width: 100%;
+    position: fixed;
+}
+.navbar-fix{
+    animation: 4s navbar  ease-in-out;
+    z-index: 2;
+    width: 100%;
+    background: black;
+    position: fixed;
+
 }
 @keyframes navbar {
     0%{
@@ -11,13 +21,17 @@
         transform: translateY(0);
     }
 }
-.navbar .navbar-content {
+ .navbar-content {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 90%;
+    height: min-content;
 }
-
+ .navbar-content svg{
+    height: 60px;
+    width: 250px;
+}
 .navbar-content ul{
     display: flex;
     justify-content: space-evenly;
@@ -25,54 +39,67 @@
     padding: 0;
     width: 90%;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 0;
 }
-
+.navbar-content ul li {
+    position: relative;
+    }
+    .navbar-content ul li::before{
+        content: "";
+        display: block;
+        width: 0;
+        height: 3px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: all ease-in-out 200ms;
+    }
+    .navbar-content ul li:hover::before{
+    width: 100%;
+    }
 .navbar-content ul li a{
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: large;
-    transition: all ease-in-out 300ms;
+    color: #8f8b8b;
+    font-size: 1.5rem;
 }
 .navbar-content ul li a:hover{
-    background-color: rgba(214, 200, 200, 0.658);
-    border-bottom: 0.3rem solid rgb(255, 255, 255);
-    transition: 0.3s ease-in;
+    color: #ffffff;
+    
 }
 .barras {
 display: none;
 position: relative;
-}
 
-.form-search{
-    margin-top: 10px;
 }
 
 .input-search{
-padding: 6px;
+padding: 4px;
 border-radius: 4px;
 border: none;
 margin-right: 10px;
-font-size: large;
+font-size: 1rem;
 }
 .button-search{
 padding: 4px;
-font-size: medium;
+font-size: 1rem;
 border-radius: 4px;
 border: none;
+cursor: pointer;
+transition: all .3s;
 }
 .button-search:hover{
 background-color: black;
 color: #fff;
 }
-@media (max-width: 500px) {
+@media (max-width: 450px) {
     .input-search{
         margin-bottom: 10px;
         font-size: small;
         }
 }
 
-@media (max-width: 800px) {   
+@media (max-width: 1000px) {   
     .navbar{
         padding-top: 0;
     }
@@ -87,29 +114,31 @@ color: #fff;
 }
 .navbar div svg{
     width: 200px;
+    margin-top: 40px;
 }
 .navbar .navbar-content.close {
     left: -400px;
     top: 0;
 }
 .navbar .navbar-content.open {
-    background-color: black;
-    left: 0; font-weight: 600;
+    background-color: rgb(0, 0, 0);
+    left: 0; 
+    font-weight: 400;
     top: 0;
 }
 .navbar-content ul{
-    margin: 0;
-    display: block;
-    min-height: 90vh;
-    padding-top: 60px;
+    margin: 60px 0 0;
+    justify-content: flex-start;
+    align-items: flex-start;
     }
     .navbar-content ul li{
     width: 70%;
-    margin: 0px 30px 30px;
+    margin: 10px 0;
 }
 .navbar-content ul li a{
 color: white;
-padding: 5px;
+padding: 0px;
+font-size: 1.3rem;
 }
 .barras {
     position: absolute;
@@ -122,10 +151,13 @@ padding: 5px;
     display: block;
     top:0;
     left: 5px;
+    cursor: pointer;
 }
 .barras button{
     background: none;
     border: none;
+    cursor: pointer;
+
 }
 .barras span{
     display: block;
@@ -134,25 +166,13 @@ padding: 5px;
     margin: 5px 0px;
     border-radius: 1px;
     background-color: #fff;
-}
-}
-
-
-@media (min-width: 800px) {
-    .navbar .navbar-content {
-        padding: 0 0 0 80px;
-    }
-    .navbar-content ul li a{
-        font-size: x-large;
-    }
-}
-@media (min-width: 1316px) {
-.navbar-content ul li a{
-    font-size: xx-large;
+    cursor: pointer;
 
 }
-.navbar-content img{
-    width: 80px;
-
+.form-search{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 }

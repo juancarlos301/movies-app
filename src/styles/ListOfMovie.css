@@ -1,18 +1,22 @@
 .container-all{
     overflow: hidden;
-    width: 100vw;
+    margin-top: 10px;
+    max-width: 100%;
 }
 .container-grid{
     overflow: visible;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .text {
-    margin-left: 60px;
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: white;
     text-shadow: -2px 4px 8px #646060;
-    margin-bottom: 10px;
-
+    margin-bottom: 40px;
+    margin-left: 10px;
 }
 
 .container{
@@ -21,13 +25,36 @@ margin: 10px 0px 50px ;
 overflow-x: scroll;
 width: 100%;
 scroll-snap-type: x mandatory; 
+cursor: pointer;
+list-style: none;
+padding: 10px;
 }
+.container::-webkit-scrollbar{
+   height: 8px;
+  }
+.container::-webkit-scrollbar-track {
+    background-color: rgba(40, 40, 53, 0.452); 
+}
+.container::-webkit-scrollbar-thumb {
+    background-color: rgb(168, 152, 152);
+    border-radius: 20px;   
+  }
 
 .grid-con{
     display: grid;
-    margin: 0 20px;
-    grid-template-columns: repeat(auto-fit, 170px);
+    margin: 0 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 30px 10px;
     padding: 0;
-
+    width: 80%;
+}
+@media (max-width:400px) {
+.grid-con{
+    grid-template-columns: repeat(auto-fit, minmax(108px, 1fr));
+}
+}
+@media (min-width:1000px) {
+    .grid-con{
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
 }

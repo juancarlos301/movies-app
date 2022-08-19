@@ -12,7 +12,7 @@ const Favs = () => {
             <div className="navbar">
                 <Navbar />
             </div>
-            <div>
+            <div className="div-list">
                 <ListFavsMovies list={list} />
             </div>
         </div>

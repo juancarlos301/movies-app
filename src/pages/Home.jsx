@@ -72,20 +72,22 @@ const Home = () => {
     return (
         <div>
             <Welcome query={query} searchMovie={searchMovie} ChangeHandler={ChangeHandler} />
+            <div className="container-list">
             <ListOFPopularMovies
                 movies={popularMovies}
                 loading={loading}
                 title="Popular Movies"
             />
             <ListFavsMovies />
-
             <ListOFPopularMovies
                 list={list}
                 title="Movies"
                 movies={movies}
                 loading={loading} />
 
+
             <LazyLoad />
+        </div>
         </div>
 
     )

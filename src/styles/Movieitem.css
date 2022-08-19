@@ -9,12 +9,13 @@
 }
 
 .container_imag .imag{
-    max-width: 150px;
     border-radius: 10px;
     cursor: pointer;
+    max-width: 178px;
+
 }
 .container_imag .imag:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .container_imag p{
@@ -30,4 +31,9 @@
 
 .button-fav svg{ 
     fill: aliceblue;
+}
+@media (max-width:1000px) {
+.container_imag .imag{
+max-width: 123px;
+}
 }

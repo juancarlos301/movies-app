@@ -5,15 +5,8 @@
 }
 .navbar{
     grid-column: span 8;
-    
 }
-.con-text{
+.div-list{
     grid-column: span 8;
-}
-.con-text h1{
-    margin-left: 60px;
-    font-size: 4rem;
-    color: white;
-    text-shadow: -2px 4px 8px #646060;
-    margin-bottom: 10px;
+    margin-top: 100px;
 }

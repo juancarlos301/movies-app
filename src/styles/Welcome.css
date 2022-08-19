@@ -1,17 +1,17 @@
 .container-video {
     min-width: 100%;
-    max-height: 100vh;
-    height: 100vh;
+    max-height: 84vh;
+    height: 84vh;
     position: relative;
     margin: 0;
     overflow: hidden;
-    width: 100vw;
+    width: 100%;
+    background: linear-gradient(#080f2800 60%, #080f28e3 94%);
 }
 .container-video .videito{
 position: absolute;
 min-width: 100%;
-min-height: 100%;
-
+min-height: 70%;
 top: 50%;
 left:50%;
 z-index: -1;
